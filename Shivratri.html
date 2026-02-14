@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>महाशिवरात्रि दिव्य अनुभव</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    background:radial-gradient(circle at bottom,#000015,#000000);
+    font-family:'Noto Serif Devanagari',serif;
+    color:white;
+    text-align:center;
+}
+
+/* Galaxy */
+.galaxy{
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:
+    radial-gradient(circle at center,rgba(0,0,255,0.3),transparent 60%),
+    radial-gradient(circle at 30% 40%,rgba(255,0,255,0.3),transparent 60%),
+    radial-gradient(circle at 70% 60%,rgba(0,255,255,0.3),transparent 60%);
+    animation:rotateGalaxy 160s linear infinite;
+    z-index:-3;
+}
+@keyframes rotateGalaxy{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+/* Stars */
+.star{
+    position:fixed;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:floatStars linear infinite;
+}
+@keyframes floatStars{
+    from{transform:translateY(0px);opacity:0.4;}
+    to{transform:translateY(-100vh);opacity:1;}
+}
+
+/* Heading */
+h1{
+    font-size:55px;
+    color:#00ffff;
+    text-shadow:0 0 30px cyan,0 0 60px blue;
+    margin-top:5vh;
+}
+
+/* Shivling */
+.shivling{
+    font-size:90px;
+    margin:20px 0;
+    animation:glowShiv 2s infinite alternate;
+}
+@keyframes glowShiv{
+    from{text-shadow:0 0 20px cyan;}
+    to{text-shadow:0 0 60px #00ffff,0 0 100px blue;}
+}
+
+/* Wishes */
+.wishes{
+    font-size:20px;
+    color:#ffd700;
+    max-width:750px;
+    margin:15px auto;
+    line-height:1.6;
+}
+
+/* Username */
+.username{
+    font-size:22px;
+    color:gold;
+    margin-bottom:15px;
+}
+
+/* Buttons */
+button{
+    padding:12px 25px;
+    margin:10px;
+    border-radius:25px;
+    border:none;
+    background:linear-gradient(45deg,#00ffff,#0066ff);
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    box-shadow:0 0 20px cyan;
+    transition:0.3s;
+}
+button:hover{transform:scale(1.1);}
+
+/* Sections */
+.info-section{
+    max-width:900px;
+    margin:20px auto;
+    padding:25px;
+    background:rgba(0,0,0,0.75);
+    border-radius:15px;
+    box-shadow:0 0 20px cyan;
+    display:none;
+    animation:fadeIn 0.6s ease-in-out;
+    line-height:1.8;
+    text-align:left;
+}
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+/* Flowers */
+.petal{
+    position:absolute;
+    top:-20px;
+    font-size:22px;
+    animation:fall linear forwards;
+}
+@keyframes fall{
+    to{transform:translateY(110vh);}
+}
+
+/* Developer */
+.developer{
+    position:fixed;
+    bottom:15px;
+    right:20px;
+    font-size:14px;
+    color:#00ffff;
+    opacity:0.9;
+    text-shadow:0 0 10px cyan;
+    font-weight:bold;
+}
+.developer span{
+    color:gold;
+    text-shadow:0 0 8px gold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="galaxy"></div>
+
+<h1>🕉 हर हर महादेव 🔱</h1>
+
+<div class="shivling">🕉🔱🪔</div>
+
+<div class="wishes">
+महाशिवरात्रि के पावन अवसर पर भगवान शिव आपके जीवन में सुख, शांति और समृद्धि प्रदान करें।
+आपकी सभी मनोकामनाएँ पूर्ण हों।
+🌸 महाशिवरात्रि की हार्दिक शुभकामनाएँ 🌸
+</div>
+
+<div class="username" id="username"></div>
+
+<button onclick="toggleSection('slok')">📖 शिव स्तोत्र</button>
+<button onclick="toggleSection('about')">🕉 महाशिवरात्रि का महत्व</button>
+<button onclick="toggleSection('story')">📜 पौराणिक कथा</button>
+<button onclick="toggleSection('ritual')">🔥 पूजा विधि</button>
+<button onclick="toggleSection('knowledge')">📚 गहन आध्यात्मिक ज्ञान</button>
+
+<!-- Sections -->
+
+<div class="info-section" id="slok">
+<h2>शिव स्तोत्र</h2>
+ॐ नमः शिवाय<br><br>
+करचरण कृतं वाक्कायजं कर्मजं वा।
+श्रवणनयनजं वा मानसं वापराधम्॥
+तत्सर्वं क्षमस्व जय जय करुणाब्धे श्रीमहादेव शंभो॥
+</div>
+
+<div class="info-section" id="about">
+<h2>महाशिवरात्रि का महत्व</h2>
+महाशिवरात्रि भगवान शिव और माता पार्वती के दिव्य मिलन का पर्व है।
+यह आत्मशुद्धि और आध्यात्मिक जागरण का प्रतीक है।
+</div>
+
+<div class="info-section" id="story">
+<h2>पौराणिक कथा</h2>
+मान्यता है कि इस दिन शिव और पार्वती का विवाह हुआ।
+एक अन्य कथा के अनुसार शिव ने इस रात तांडव किया।
+</div>
+
+<div class="info-section" id="ritual">
+<h2>पूजा विधि</h2>
+1. स्नान कर स्वच्छ वस्त्र धारण करें।
+2. शिवलिंग पर जल, दूध और बेलपत्र अर्पित करें।
+3. ॐ नमः शिवाय मंत्र का जप करें।
+</div>
+
+<div class="info-section" id="knowledge">
+<h2>गहन आध्यात्मिक ज्ञान</h2>
+महाशिवरात्रि केवल एक पर्व नहीं, बल्कि चेतना के जागरण की रात्रि है।<br>
+Mahashivratri is not just a festival, but a night of awakening consciousness.<br><br>
+
+शिवलिंग अनंत ब्रह्मांड का प्रतीक है जिसका न आदि है न अंत।<br>
+The Shivling represents the infinite universe with no beginning and no end.<br><br>
+
+महाशिवरात्रि आत्म-परिवर्तन की रात्रि है।<br>
+Mahashivratri is a night of self-transformation.
+</div> 
+
+<div class="developer">
+    Designed & Developed with Devotion by 
+    <span>Divyansh</span> 🔱 
+</div>
+
+
+<script>
+
+/* Stars */
+for(let i=0;i<250;i++){
+    const star=document.createElement("div");
+    star.className="star";
+    star.style.top=Math.random()*100+"vh";
+    star.style.left=Math.random()*100+"vw";
+    star.style.animationDuration=(Math.random()*30+10)+"s";
+    document.body.appendChild(star);
+}
+
+/* Flower Shower */
+function createPetals(){
+    for(let i=0;i<12;i++){
+        const petal=document.createElement("div");
+        petal.classList.add("petal");
+        petal.innerHTML="🌸";
+        petal.style.left=Math.random()*100+"vw";
+        petal.style.animationDuration=Math.random()*4+3+"s";
+        document.body.appendChild(petal);
+        setTimeout(()=>petal.remove(),7000);
+    }
+}
+setInterval(createPetals,2000);
+
+/* Toggle */
+function toggleSection(id){
+    const sections=document.querySelectorAll('.info-section');
+    sections.forEach(sec=>{
+        if(sec.id===id){
+            sec.style.display=sec.style.display==="block"?"none":"block";
+        }else{
+            sec.style.display="none";
+        }
+    });
+}
+
+/* Name Fetch */
+function getName(){
+    const params=new URLSearchParams(window.location.search);
+    let name=params.get("name");
+
+    if(!name){name=localStorage.getItem("shivName");}
+
+    if(!name){
+        name=prompt("अपना नाम लिखें:");
+        if(name)localStorage.setItem("shivName",name);
+    }
+
+    if(name){
+        document.getElementById("username").innerHTML=
+        name+" जी, महादेव का आशीर्वाद आप पर बना रहे 🙏";
+    }
+}
+getName();
+
+</script>
+
+</body>
+</html>
