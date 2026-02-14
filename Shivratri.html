@@ -33,6 +33,23 @@ body{
     to{transform:rotate(360deg);}
 }
 
+/* Big Background Shivling */
+.bg-shivling{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:420px;
+    opacity:0.05;
+    z-index:-2;
+    animation:bgPulse 6s infinite alternate ease-in-out;
+    pointer-events:none;
+}
+@keyframes bgPulse{
+    from{opacity:0.04;transform:translate(-50%,-50%) scale(1);}
+    to{opacity:0.08;transform:translate(-50%,-50%) scale(1.05);}
+}
+
 /* Stars */
 .star{
     position:fixed;
@@ -73,13 +90,6 @@ h1{
     max-width:750px;
     margin:15px auto;
     line-height:1.6;
-}
-
-/* Username */
-.username{
-    font-size:22px;
-    color:gold;
-    margin-bottom:15px;
 }
 
 /* Buttons */
@@ -147,6 +157,7 @@ button:hover{transform:scale(1.1);}
 <body>
 
 <div class="galaxy"></div>
+<div class="bg-shivling">🕉️🔱</div>
 
 <h1>🕉 हर हर महादेव 🔱</h1>
 
@@ -158,15 +169,11 @@ button:hover{transform:scale(1.1);}
 🌸 महाशिवरात्रि की हार्दिक शुभकामनाएँ 🌸
 </div>
 
-<div class="username" id="username"></div>
-
 <button onclick="toggleSection('slok')">📖 शिव स्तोत्र</button>
 <button onclick="toggleSection('about')">🕉 महाशिवरात्रि का महत्व</button>
 <button onclick="toggleSection('story')">📜 पौराणिक कथा</button>
 <button onclick="toggleSection('ritual')">🔥 पूजा विधि</button>
 <button onclick="toggleSection('knowledge')">📚 गहन आध्यात्मिक ज्ञान</button>
-
-<!-- Sections -->
 
 <div class="info-section" id="slok">
 <h2>शिव स्तोत्र</h2>
@@ -201,17 +208,12 @@ button:hover{transform:scale(1.1);}
 Mahashivratri is not just a festival, but a night of awakening consciousness.<br><br>
 
 शिवलिंग अनंत ब्रह्मांड का प्रतीक है जिसका न आदि है न अंत।<br>
-The Shivling represents the infinite universe with no beginning and no end.<br><br>
-
-महाशिवरात्रि आत्म-परिवर्तन की रात्रि है।<br>
-Mahashivratri is a night of self-transformation.
-</div> 
-
-<div class="developer">
-    Designed & Developed with Devotion by 
-    <span>Divyansh</span> 🔱 
+The Shivling represents the infinite universe with no beginning and no end.
 </div>
 
+<div class="developer">
+Designed & Developed with Devotion by <span>Divyansh</span> 🔱 | Assisted by <span>Nova AI</span>
+</div>
 
 <script>
 
@@ -250,25 +252,6 @@ function toggleSection(id){
         }
     });
 }
-
-/* Name Fetch */
-function getName(){
-    const params=new URLSearchParams(window.location.search);
-    let name=params.get("name");
-
-    if(!name){name=localStorage.getItem("shivName");}
-
-    if(!name){
-        name=prompt("अपना नाम लिखें:");
-        if(name)localStorage.setItem("shivName",name);
-    }
-
-    if(name){
-        document.getElementById("username").innerHTML=
-        name+" जी, महादेव का आशीर्वाद आप पर बना रहे 🙏";
-    }
-}
-getName();
 
 </script>
 
